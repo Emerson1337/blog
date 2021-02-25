@@ -1,0 +1,30 @@
+<div class="card border-dark text-center">
+  <div class="card-header">
+    Welcome!
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Bem vindo ao blog das tecnologias!</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+  </div>
+</div>
+
+<h2 class="">Posts Recentes:</h2>
+
+{{#each postagens}}
+
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{nome}}</h3>
+        <p>{{descricao}}</p>
+        <a href="/postagens/{{slug}}"><button class="btn btn-outline-success">Leia mais</button></a>
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small><br>
+        <small>Data de publicação: {{date}}</small>
+    </div>
+</div>
+
+
+{{else}}
+    <h5>Nenhuma postagem recente!</h5>
+{{/each}}
